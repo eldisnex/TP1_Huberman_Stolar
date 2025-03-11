@@ -15,7 +15,8 @@ promedio.addEventListener(
 mayor.addEventListener(
    'click',
    () =>
-      (resultado.textContent = Math.max(
-         ...inputs.map((e) => parseFloat(e.value))
-      ))
+      (resultado.textContent = inputs.find(
+         (input) =>
+            input.value == Math.max(...inputs.map((e) => parseFloat(e.value)))
+      ).id)
 );
